@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="NutriKids - Экспертная система детского питания. Научный подход к питанию вашего ребенка.">
+   <meta name="keywords" content="детское питание, питание детей, грудное вскармливание, прикорм, детская нутрициология">
+   <title>NutriKids - Экспертная система детского питания</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="loading">
+   <!-- Preloader with animated logo -->
+   <div class="preloader">
+       <div class="preloader__content">
+           <canvas id="preloaderCanvas" width="100" height="100"></canvas>
+           <span class="preloader__text">NutriKids</span>
+       </div>
+   </div>
+
+   <!-- Fixed Header -->
+   <header class="header" data-header>
+       <nav class="nav">
+           <div class="nav__logo">
+               <canvas id="logoCanvas" width="32" height="32"></canvas>
+               <span>NutriKids</span>
+           </div>
+           
+           <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+               <span class="nav-toggle__bar"></span>
+               <span class="nav-toggle__bar"></span>
+               <span class="nav-toggle__bar"></span>
+           </button>
+
+           <ul class="nav__links">
+               <li><a href="#hero">Главная</a></li>
+               <li class="has-submenu">
+                   <a href="#nutrition">Питание <i class="fas fa-chevron-down"></i></a>
+                   <ul class="submenu">
+                       <li><a href="#breastfeeding">Грудное вскармливание</a></li>
+                       <li><a href="#formula">Искусственное вскармливание</a></li>
+                       <li><a href="#complementary">Прикорм</a></li>
+                       <li><a href="#schedule">Режим кормления</a></li>
+                   </ul>
+               </li>
+               <li class="has-submenu">
+                   <a href="#development">Развитие <i class="fas fa-chevron-down"></i></a>
+                   <ul class="submenu">
+                       <li><a href="#physical">Физическое развитие</a></li>
+                       <li><a href="#cognitive">Когнитивное развитие</a></li>
+                       <li><a href="#milestones">Этапы развития</a></li>
+                   </ul>
+               </li>
+               <li class="has-submenu">
+                   <a href="#health">Здоровье <i class="fas fa-chevron-down"></i></a>
+                   <ul class="submenu">
+                       <li><a href="#immunity">Иммунитет</a></li>
+                       <li><a href="#vitamins">Витамины</a></li>
+                       <li><a href="#allergies">Аллергии</a></li>
+                   </ul>
+               </li>
+               <li><a href="#research">Исследования</a></li>
+               <li><a href="#experts">Эксперты</a></li>
+               <li><a href="#app" class="nav-cta">Приложение</a></li>
+           </ul>
+
+           <div class="nav__utils">
+               <div class="datetime">
+                   <time class="date" datetime="2024-01-20"></time>
+                   <time class="time" datetime="12:00"></time>
+               </div>
+               <button class="theme-switcher" aria-label="Переключить тему">
+                   <i class="fas fa-moon"></i>
+               </button>
+               <button class="search-toggle" aria-label="Поиск">
+                   <i class="fas fa-search"></i>
+               </button>
+           </div>
+       </nav>
+
+       <!-- Search Overlay -->
+       <div class="search-overlay">
+           <div class="search-container">
+               <input type="search" placeholder="Поиск по сайту...">
+               <button class="search-close">
+                   <i class="fas fa-times"></i>
+               </button>
+           </div>
+           <div class="quick-links">
+               <h3>Популярные запросы</h3>
+               <div class="quick-links__grid">
+                   <a href="#schedule"><i class="fas fa-clock"></i> График кормления</a>
+                   <a href="#allergies"><i class="fas fa-shield-virus"></i> Аллергии</a>
+                   <a href="#development"><i class="fas fa-baby"></i> Развитие</a>
+                   <a href="#nutrition"><i class="fas fa-apple-alt"></i> Питание</a>
+               </div>
+           </div>
+       </div>
+
+       <!-- Progress Bar -->
+       <div class="scroll-progress">
+           <div class="scroll-progress__bar"></div>
+       </div>
+   </header>
+
+   <main>
+       <!-- Hero Section with Interactive Elements -->
+       <section id="hero" class="hero">
+           <div class="hero__background">
+               <canvas id="particleCanvas"></canvas>
+           </div>
+           
+           <div class="hero__content">
+               <h1 class="animate-text">
+                   <span class="text-gradient">Научный подход</span>
+                   к питанию вашего ребенка
+               </h1>
+               
+               <p class="hero__subtitle">
+                   Инновационная система планирования питания, основанная на последних 
+                   исследованиях в области детской нутрициологии
+               </p>
+
+               <div class="hero__features">
+                   <div class="feature">
+                       <i class="fas fa-brain"></i>
+                       <span>ИИ-анализ</span>
+                   </div>
+                   <div class="feature">
+                       <i class="fas fa-shield-virus"></i>
+                       <span>Безопасность</span>
+                   </div>
+                   <div class="feature">
+                       <i class="fas fa-user-md"></i>
+                       <span>Эксперты</span>
+                   </div>
+               </div>
+
+               <div class="hero__cta">
+                   <a href="#app-download" class="btn btn--primary">
+                       <i class="fas fa-mobile-alt"></i>
+                       Скачать приложение
+                   </a>
+                   <a href="#demo" class="btn btn--secondary">
+                       <i class="fas fa-play"></i>
+                       Смотреть демо
+                   </a>
+               </div>
+
+               <div class="hero__stats">
+                   <div class="stat" data-value="50000">
+                       <canvas class="stat__progress" width="80" height="80"></canvas>
+                       <div class="stat__content">
+                           <span class="stat__number">0</span>
+                           <span class="stat__label">Активных пользователей</span>
+                       </div>
+                   </div>
+                   <div class="stat" data-value="98">
+                       <canvas class="stat__progress" width="80" height="80"></canvas>
+                       <div class="stat__content">
+                           <span class="stat__number">0</span>
+                           <span class="stat__label">% Удовлетворенности</span>
+                       </div>
+                   </div>
+                   <div class="stat" data-value="200">
+                       <canvas class="stat__progress" width="80" height="80"></canvas>
+                       <div class="stat__content">
+                           <span class="stat__number">0</span>
+                           <span class="stat__label">Экспертов</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="hero__visual">
+               <canvas id="heroAnimation"></canvas>
+               <div class="floating-elements">
+                   <div class="float-element">
+                       <i class="fas fa-apple-alt"></i>
+                       <span>Здоровое питание</span>
+                   </div>
+                   <div class="float-element">
+                       <i class="fas fa-chart-line"></i>
+                       <span>Отслеживание роста</span>
+                   </div>
+                   <div class="float-element">
+                       <i class="fas fa-calendar-check"></i>
+                       <span>Планирование</span>
+                   </div>
+               </div>
+           </div>
+
+           <div class="scroll-indicator">
+               <span>Прокрутите вниз</span>
+               <i class="fas fa-chevron-down"></i>
+           </div>
+       </section>
+
+       <!-- Key Features Section -->
+       <section id="key-features" class="key-features">
+           <div class="section__header">
+               <h2 class="text-gradient">Ключевые возможности</h2>
+               <p class="section__subtitle">
+                   Комплексный подход к планированию питания и развития вашего ребенка
+               </p>
+           </div>
+
+           <div class="features-grid">
+               <div class="feature-card" data-aos="fade-up">
+                   <div class="feature-card__icon">
+                       <canvas id="aiIcon" width="64" height="64"></canvas>
+                       <i class="fas fa-brain"></i>
+                   </div>
+                   <h3>Искусственный интеллект</h3>
+                   <p>Персонализированные рекомендации на основе анализа данных</p>
+                   <ul class="feature-list">
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Адаптивные алгоритмы
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Прогнозирование развития
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Анализ пищевых привычек
+                       </li>
+                   </ul>
+               </div>
+
+               <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                   <div class="feature-card__icon">
+                       <canvas id="trackingIcon" width="64" height="64"></canvas>
+                       <i class="fas fa-chart-line"></i>
+                   </div>
+                   <h3>Умный трекинг</h3>
+                   <p>Мониторинг всех аспектов питания и развития</p>
+                   <ul class="feature-list">
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Графики роста и веса
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Дневник питания
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Анализ нутриентов
+                       </li>
+                   </ul>
+               </div>
+
+               <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                   <div class="feature-card__icon">
+                       <canvas id="expertIcon" width="64" height="64"></canvas>
+                       <i class="fas fa-user-md"></i>
+                   </div>
+                   <h3>Экспертная поддержка</h3>
+                   <p>Консультации специалистов и научная база знаний</p>
+                   <ul class="feature-list">
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Команда педиатров
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Нутрициологи
+                       </li>
+                       <li>
+                           <i class="fas fa-check"></i>
+                           Научные статьи
+                       </li>
+                   </ul>
+               </div>
+           </div>
+
+           <section class="showcase">
+            <div class="bg-dots"></div>
+            
+            <div class="showcase__content">
+                <div class="showcase__text">
+                    <h2 class="showcase__title">Персонализированные планы питания</h2>
+                    <p class="showcase__description">
+                        Адаптивные рекомендации с учетом возраста, веса и особенностей ребенка
+                    </p>
+        
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <div class="feature-card__header">
+                                <div class="feature-card__icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3 class="feature-card__title">ИИ-анализ</h3>
+                            </div>
+                            <p>Умные алгоритмы анализируют данные и создают оптимальные планы питания</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-card__header">
+                                <div class="feature-card__icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="feature-card__title">Мониторинг</h3>
+                            </div>
+                            <p>Отслеживание прогресса и автоматическая корректировка рекомендаций</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-card__header">
+                                <div class="feature-card__icon">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <h3 class="feature-card__title">Экспертная поддержка</h3>
+                            </div>
+                            <p>Консультации с педиатрами и нутрициологами в режиме реального времени</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-card__header">
+                                <div class="feature-card__icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="feature-card__title">Безопасность</h3>
+                            </div>
+                            <p>Все рекомендации основаны на научных исследованиях и проверены экспертами</p>
+                        </div>
+                    </div>
+        
+                    <div class="stats-grid">
+                        <div class="stat" data-value="98" data-suffix="%">
+                            <span class="stat__number">98%</span>
+                            <span class="stat__label">Точность рекомендаций</span>
+                        </div>
+                        <div class="stat" data-value="50000" data-suffix="+">
+                            <span class="stat__number">50k+</span>
+                            <span class="stat__label">Активных пользователей</span>
+                        </div>
+                        <div class="stat" data-value="24" data-suffix="/7">
+                            <span class="stat__number">24/7</span>
+                            <span class="stat__label">Экспертная поддержка</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="showcase__visual">
+                    <div class="canvas-container">
+                        <canvas id="showcaseCanvas"></canvas>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-icon">
+                            <i class="fas fa-apple-alt"></i>
+                            <span>Здоровое питание</span>
+                        </div>
+                        <div class="float-icon">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Анализ нутриентов</span>
+                        </div>
+                        <div class="float-icon">
+                            <i class="fas fa-clock"></i>
+                            <span>Умное планирование</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       </section>
+
+       <!-- Nutrition Science Section -->
+       <section id="nutrition-science" class="nutrition-science">
+        <div class="section__header">
+            <h2 class="text-gradient">Научный подход к питанию</h2>
+            <p class="section__subtitle">
+                Основано на последних исследованиях в области детской нутрициологии
+            </p>
+        </div>
+    
+        <div class="science-container">
+            <!-- Исследования -->
+            <div class="science-card" data-aos="fade-up">
+                <div class="science-card__visual">
+                    <canvas id="researchCanvas" width="200" height="200"></canvas>
+                    <div class="pulse-effect"></div>
+                </div>
+                <h3>Исследования</h3>
+                <div class="science-card__content">
+                    <ul class="research-list">
+                        <li class="research-item">
+                            <div class="research-badge who">
+                                <span class="badge-icon">WHO</span>
+                                <div class="badge-progress"></div>
+                            </div>
+                            <div class="research-info">
+                                <h4>Всемирная организация здравоохранения</h4>
+                                <p>Глобальные рекомендации по питанию детей раннего возраста</p>
+                                <div class="research-stats">
+                                    <span>195 стран</span>
+                                    <span>150+ экспертов</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="research-badge espghan">
+                                <span class="badge-icon">ESP</span>
+                                <div class="badge-progress"></div>
+                            </div>
+                            <div class="research-info">
+                                <h4>Европейское общество детской гастроэнтерологии</h4>
+                                <p>Стандарты питания и пищевой безопасности</p>
+                                <div class="research-stats">
+                                    <span>50+ стран</span>
+                                    <span>1000+ исследований</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="research-item">
+                            <div class="research-badge aap">
+                                <span class="badge-icon">AAP</span>
+                                <div class="badge-progress"></div>
+                            </div>
+                            <div class="research-info">
+                                <h4>Американская академия педиатрии</h4>
+                                <p>Клинические рекомендации по питанию детей</p>
+                                <div class="research-stats">
+                                    <span>67,000 педиатров</span>
+                                    <span>Ежегодные обновления</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Анализ данных -->
+            <div class="science-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="science-card__visual">
+                    <canvas id="analyticsCanvas" width="200" height="200"></canvas>
+                    <div class="floating-particles"></div>
+                </div>
+                <h3>Анализ данных</h3>
+                <div class="science-card__content">
+                    <div class="analytics-grid">
+                        <div class="analytics-item">
+                            <div class="circular-progress">
+                                <canvas id="profilesProgress" width="120" height="120"></canvas>
+                                <div class="progress-info">
+                                    <span class="progress-number">50,000+</span>
+                                    <span class="progress-label">Профилей</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analytics-item">
+                            <div class="circular-progress">
+                                <canvas id="recordsProgress" width="120" height="120"></canvas>
+                                <div class="progress-info">
+                                    <span class="progress-number">1M+</span>
+                                    <span class="progress-label">Записей</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="analytics-item">
+                            <div class="circular-progress">
+                                <canvas id="accuracyProgress" width="120" height="120"></canvas>
+                                <div class="progress-info">
+                                    <span class="progress-number">98%</span>
+                                    <span class="progress-label">Точность</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ai-features">
+                        <div class="ai-feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Машинное обучение</span>
+                        </div>
+                        <div class="ai-feature-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Нейронные сети</span>
+                        </div>
+                        <div class="ai-feature-item">
+                            <i class="fas fa-microscope"></i>
+                            <span>Научный анализ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Методология -->
+            <div class="science-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="science-card__visual">
+                    <canvas id="methodologyCanvas" width="200" height="200"></canvas>
+                    <div class="connecting-lines"></div>
+                </div>
+                <h3>Методология</h3>
+                <div class="science-card__content">
+                    <div class="methodology-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Сбор данных</h4>
+                                <p>Комплексный анализ медицинских показателей и диетологических параметров</p>
+                                <div class="step-progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Анализ</h4>
+                                <p>Применение алгоритмов машинного обучения для обработки данных</p>
+                                <div class="step-progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Валидация</h4>
+                                <p>Проверка результатов экспертами и клиническими исследованиями</p>
+                                <div class="step-progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Рекомендации</h4>
+                                <p>Формирование персонализированных планов питания</p>
+                                <div class="step-progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Tracking Section -->
+    <!-- Nutrition Stages Section -->
+<section class="nutrition-stages" id="nutrition-stages">
+    <!-- Header -->
+    <div class="nutrition-stages__header">
+        <h2 class="section-title">Питание по возрастам</h2>
+        <p class="section-subtitle">Рекомендации экспертов для каждого этапа развития вашего малыша</p>
+        <div class="partners-badge">
+            <img src="/api/placeholder/120/40" alt="Nestle Logo" class="partner-logo">
+            <span>Официальный партнер по питанию</span>
+        </div>
+    </div>
+
+    <!-- Age Groups Grid -->
+    <div class="nutrition-stages__grid">
+        <!-- 0-6 months -->
+        <div class="age-card">
+            <div class="age-card__header">
+                <div class="age-info">
+                    <h3>0-6 месяцев</h3>
+                    <span class="age-tag">Важный этап</span>
+                </div>
+                <img src="/api/placeholder/80/40" alt="Nestle NAN" class="brand-logo">
+            </div>
+            
+            <div class="age-card__content">
+                <!-- Primary nutrition -->
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Основное питание</h4>
+                        <ul class="nutrition-list">
+                            <li>Грудное вскармливание</li>
+                            <li>Смесь NAN SUPREME PRO</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feeding schedule -->
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Режим кормления</h4>
+                        <div class="schedule-info">
+                            <span class="schedule-item">6-8 раз в сутки</span>
+                            <span class="schedule-item">90-120 мл</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expert recommendation -->
+                <div class="expert-recommendation">
+                    <div class="expert-badge">
+                        <img src="/api/placeholder/40/40" alt="Expert" class="expert-avatar">
+                        <span>Эксперт NAN</span>
+                    </div>
+                    <p>"При искусственном вскармливании рекомендуется смесь NAN SUPREME PRO с особой формулой DHA для развития мозга"</p>
+                </div>
+            </div>
+
+            <div class="age-card__footer">
+                <div class="research-badge">
+                    <i class="fas fa-microscope"></i>
+                    <span>15+ исследований</span>
+                </div>
+                <button class="learn-more">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- 6-8 months -->
+        <div class="age-card">
+            <div class="age-card__header">
+                <div class="age-info">
+                    <h3>6-8 месяцев</h3>
+                    <span class="age-tag">Начало прикорма</span>
+                </div>
+                <img src="/api/placeholder/80/40" alt="Nestle Gerber" class="brand-logo">
+            </div>
+            
+            <div class="age-card__content">
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Первый прикорм</h4>
+                        <ul class="nutrition-list">
+                            <li>Овощное пюре Gerber</li>
+                            <li>Безмолочные каши</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Рацион</h4>
+                        <div class="nutrition-chart">
+                            <div class="chart-bar" style="width: 60%">
+                                <span>Грудное молоко/смесь 60%</span>
+                            </div>
+                            <div class="chart-bar" style="width: 40%">
+                                <span>Прикорм 40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expert-recommendation">
+                    <div class="expert-badge">
+                        <img src="/api/placeholder/40/40" alt="Expert" class="expert-avatar">
+                        <span>Эксперт Gerber</span>
+                    </div>
+                    <p>"Органические пюре Gerber идеально подходят для первого знакомства с твердой пищей"</p>
+                </div>
+            </div>
+
+            <div class="age-card__footer">
+                <div class="research-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Сертификат FDA</span>
+                </div>
+                <button class="learn-more">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- 8-12 months -->
+        <div class="age-card">
+            <div class="age-card__header">
+                <div class="age-info">
+                    <h3>8-12 месяцев</h3>
+                    <span class="age-tag">Расширенный рацион</span>
+                </div>
+                <img src="/api/placeholder/80/40" alt="Nestle" class="brand-logo">
+            </div>
+            
+            <div class="age-card__content">
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Новые продукты</h4>
+                        <ul class="nutrition-list">
+                            <li>Мясное пюре</li>
+                            <li>Фруктовые пюре</li>
+                            <li>Детское печенье</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nutrition-type">
+                    <div class="icon-circle">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Режим питания</h4>
+                        <div class="meal-schedule">
+                            <span>5-6 приемов пищи</span>
+                            <div class="meal-types">
+                                <span>3 основных</span>
+                                <span>2-3 перекуса</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expert-recommendation">
+                    <div class="expert-badge">
+                        <img src="/api/placeholder/40/40" alt="Expert" class="expert-avatar">
+                        <span>Нутрициолог Nestle</span>
+                    </div>
+                    <p>"Разнообразное меню с продуктами разных текстур способствует правильному развитию навыков жевания"</p>
+                </div>
+            </div>
+
+            <div class="age-card__footer">
+                <div class="research-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>100% натурально</span>
+                </div>
+                <button class="learn-more">Подробнее <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partnership Benefits -->
+    <div class="partnership-showcase">
+        <div class="partnership-showcase__content">
+            <div class="showcase-header">
+                <h3>В партнерстве с Nestle</h3>
+                <p>Мировой лидер в детском питании с более чем 150-летним опытом</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Научный подход</h4>
+                    <p>5000+ исследований ежегодно</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>Качество</h4>
+                    <p>100+ лабораторных тестов</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Доверие</h4>
+                    <p>50+ млн родителей</p>
+                </div>
+            </div>
+
+            <div class="partnership-metrics">
+                <div class="metric">
+                    <span class="metric-value">97%</span>
+                    <span class="metric-label">Удовлетворенность</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">180+</span>
+                    <span class="metric-label">Стран присутствия</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">24/7</span>
+                    <span class="metric-label">Поддержка</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- For Business Partners -->
+        <div class="business-partners">
+            <div class="business-partners__header">
+                <h3>Для партнеров</h3>
+                <p>Станьте частью экосистемы детского питания</p>
+            </div>
+
+            <div class="partner-opportunities">
+                <div class="opportunity-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Дистрибуция</h4>
+                    <p>Станьте официальным представителем продукции Nestle</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-store"></i>
+                    <h4>Розничная сеть</h4>
+                    <p>Специальные условия для торговых сетей</p>
+                </div>
+                <div class="opportunity-card">
+                    <i class="fas fa-hospital"></i>
+                    <h4>Медцентры</h4>
+                    <p>Программа сотрудничества с медицинскими учреждениями</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Actions -->
+    <div class="nutrition-stages__cta">
+        <div class="cta-group">
+            <h3>Для родителей</h3>
+            <button class="cta-button primary">Получить план питания</button>
+        </div>
+        <div class="cta-group">
+            <h3>Для бизнеса</h3>
+            <button class="cta-button secondary">Стать партнером</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Expert Support Section -->
+    <section id="experts" class="experts">
+        <div class="section__header">
+            <h2 class="text-gradient">Экспертная поддержка</h2>
+            <p class="section__subtitle">
+                Команда высококвалифицированных специалистов
+            </p>
+        </div>
+
+        <div class="experts-grid">
+            <div class="expert-card">
+                <div class="expert-card__header">
+                    <canvas class="expert-avatar"></canvas>
+                    <div class="expert-info">
+                        <h3>Зорин Игорь Владимирович</h3>
+                        <span class="expert-role">Главный педиатр</span>
+                    </div>
+                </div>
+                <div class="expert-card__content">
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>15+ лет опыта</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-certificate"></i>
+                            <span>PhD в педиатрии</span>
+                        </div>
+                    </div>
+                    <div class="expert-specialization">
+                        <h4>Специализация:</h4>
+                        <ul>
+                            <li>Детская нефрология</li>
+                            <li>Аллергология</li>
+                            <li>Гастроэнтерология</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-card__header">
+                    <canvas class="expert-avatar"></canvas>
+                    <div class="expert-info">
+                        <h3>Карымова Гузель Корганбековна</h3>
+                        <span class="expert-role">Педиатр</span>
+                    </div>
+                </div>
+                <div class="expert-card__content">
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>10+ лет опыта</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-certificate"></i>
+                            <span>MSc в нутрициологии</span>
+                        </div>
+                    </div>
+                    <div class="expert-specialization">
+                        <h4>Специализация:</h4>
+                        <ul>
+                            <li>Спортивное питание</li>
+                            <li>Метаболизм</li>
+                            <li>Пищевые добавки</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="expert-support">
+            <div class="support-channels">
+                <div class="channel">
+                    <i class="fas fa-video"></i>
+                    <h4>Видео консультации</h4>
+                    <p>Онлайн встречи с экспертами</p>
+                </div>
+                <div class="channel">
+                    <i class="fas fa-comments"></i>
+                    <h4>Чат поддержка</h4>
+                    <p>24/7 ответы на вопросы</p>
+                </div>
+                <div class="channel">
+                    <i class="fas fa-book-medical"></i>
+                    <h4>База знаний</h4>
+                    <p>Научные статьи и гайды</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features Section -->
+    <section id="app" class="app">
+        <div class="section__header">
+            <h2 class="text-gradient">Мобильное приложение</h2>
+            <p class="section__subtitle">
+                Все возможности системы в вашем смартфоне
+            </p>
+        </div>
+
+        <div class="app__features">
+            <div class="feature">
+                <canvas class="feature-icon"></canvas>
+                <h3>Умный трекинг</h3>
+                <p>Автоматическое отслеживание всех показателей</p>
+            </div>
+            <div class="feature">
+                <canvas class="feature-icon"></canvas>
+                <h3>ИИ рекомендации</h3>
+                <p>Персонализированные советы</p>
+            </div>
+            <div class="feature">
+                <canvas class="feature-icon"></canvas>
+                <h3>Уведомления</h3>
+                <p>Умные напоминания о кормлении</p>
+            </div>
+        </div>
+
+        <div class="app__showcase">
+            <canvas id="appShowcase"></canvas>
+            <div class="app__cta">
+                <a href="#" class="download-btn download-btn--ios">
+                    <i class="fab fa-apple"></i>
+                    App Store
+                </a>
+                <a href="#" class="download-btn download-btn--android">
+                    <i class="fab fa-google-play"></i>
+                    Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <!-- Brand -->
+            <div class="footer__brand">
+                <h2>NutriKids</h2>
+                <p>Инновационное решение для планирования детского питания</p>
+            </div>
+    
+            <!-- Product -->
+            <div class="footer__column">
+                <h3>Продукт</h3>
+                <ul>
+                    <li><a href="#features">Возможности</a></li>
+                    <li><a href="#pricing">Цены</a></li>
+                    <li><a href="#download">Скачать</a></li>
+                </ul>
+            </div>
+    
+            <!-- Company -->
+            <div class="footer__column">
+                <h3>Компания</h3>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#careers">Карьера</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+    
+            <!-- Resources -->
+            <div class="footer__column">
+                <h3>Ресурсы</h3>
+                <ul>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                    <li><a href="#privacy">Приватность</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    
+        <!-- Bottom Section -->
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                © 2025 NutriKids. Все права защищены.
+            </div>
+            <div class="footer__legal">
+                <a href="#terms">Условия использования</a>
+                <a href="#privacy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/3.7.0/chart.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
